@@ -1,0 +1,22 @@
+
+package ejer23C4;
+public class ecuacion {
+    public static String resolucion(double a , double b, double c){
+        double x1, x2, determinante;
+        determinante = Math.pow(b,2)-(4*a*c);
+        String soluciones;
+        if (determinante>0){
+            x1 = (-1*(b)+Math.sqrt(determinante))/(2*a);
+            x2 = (-1*(b)-Math.sqrt(determinante))/(2*a);
+            soluciones = "las soluciones son "+x1+", "+x2;
+        }
+        else if (determinante == 0){
+            x1 = (-b+Math.sqrt(determinante))/(2*a);
+            soluciones = "la ecuacion tiene una unica solucion "+x1;
+        }
+        else{
+            soluciones = "la ecuacion no tiene solucion ";
+        }
+        return soluciones;
+    }
+}
